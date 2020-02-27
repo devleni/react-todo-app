@@ -15,7 +15,7 @@ class NewItemForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.props.createTodo({...this.state, id: uuid()});
+    this.props.createTodo({...this.state, id: uuid(), completed: false });
     this.setState({ task: "" });
   }
   render() {
